@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+  {% include 'header.html' %}
+
+  {% include 'nav.html' %}
+
+  {% include 'message.html' %}
+
+  <div class="category-container">
+    <h1 class="category-title">
+      {{category.name}}
+    </h1>
+    {% if 'username' in session %}
+    <div class="btn-group btn-group-justified" role="group" aria-label="admin buttons">
+      <div class="btn-group">
+      <button class="btn btn-default btn-lg">
+        <a href="{{url_for('newItem', category_id = category.id)}}">
+          <span class="glyphicon glyphicon-plus"></span>  ITEM
+        </a>
+      </button>
+    </div>
+  </div>
+    {% endif %}
+    <div class="hz-rule">  
+    </div>
+
+    {% for item in items %}
+      <div class="items">
+        <h1 class="item-name">{{item.name}}</h1>
+        <h1 class="item-price">{{item.price}}</h1>
+        {% if 'username' in session %}
+        <div class="btn-group btn-group-justified" role="group" aria-label="admin buttons">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default btn-lg">
+              <a role="button" href="{{url_for('editItem', category_id=category.id, item_id=item.id)}}">
+                <span class="glyphicon glyphicon-pencil"></span>
+                EDIT
+              </a>
+            </button>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-lg">
+              <a href="{{url_for('deleteItem', category_id=category.id, item_id=item.id)}}">
+                <span class="glyphicon glyphicon-trash"></span>
+                DELETE
+              </a>
+            </button>
+          </div>
+          
+        {% endif %}
+        <div class="hz-rule">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+<nav class="navbar navbar-inverse">
+<!-- Div for nav button group -->
+<div class="btn-group btn-group-justified" role="group" aria-label="navigation">
+  <!-- Nav items for user view -->
+  {% if 'username' not in session %}
+
+    <div class="btn-group" role="group">
+      <button class="btn btn-default btn-lg">
+        <!-- Link to home page with no admin functions -->
+        <a class="nav-link" href="{{url_for('home')}}">
+          <span class="glyphicon glyphicon-home"></span>
+          <!-- Button text -->
+          HOME
+        </a>
+      </button>
+    </div>
+    <div class="btn-group" role="group">
+      <button class="btn btn-default btn-lg">
+        <!-- Link to login for admin functions -->
+        <a class="nav-link" href="{{url_for('login')}}">
+          <span class="glyphicon glyphicon-log-in"></span>
+          <!-- Button text -->
+          LOGIN
+        </a>
+      </button>
+    </div>
+  
+  {% endif %}
+  <!-- Nav items for admin view -->
+  {% if 'username' in session %}
+    
+    <div class="btn-group" role="group">
+      <!-- Dashboard button -->
+      <button class="btn btn-inverse btn-lg">
+        <a class="nav-link" href="{{url_for('dashboard')}}">
+          <span class="glyphicon glyphicon-dashboard"></span>
+          <!-- Button text -->
+           DASHBOARD
+        </a>
+      </button>
+    </div>
+    <div class="btn-group" role="group">
+      <!-- New category button -->
+      <button class="btn btn-inverse btn-lg">
+        <!-- Link to create new item page -->
+        <a class="nav-link" href="{{url_for('newCategory')}}">
+          <span class="glyphicon glyphicon-plus"></span>
+          <!-- Button text -->
+          CATEGORY
+        </a>
+      </button>
+    </div>
+    <div class="btn-group" role="group">
+      <!-- Logout button -->
+      <button class="btn btn-inverse btn-lg">
+        <!-- Link to logout user -->
+        <a class="nav-link" href="{{url_for('disconnect')}}">
+          <span class="glyphicon glyphicon-log-out"></span>
+          <!-- Button text -->
+           LOGOUT
+        </a>
+      </button>
+    </div>
+  
+  {% endif %}
+
+</div>
+</nav>

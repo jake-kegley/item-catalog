@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+  <!-- Jumbotron -->
+  {% include 'header.html' %}
+  <!-- Navigation bar -->
+  {% include 'nav.html' %}
+  {% include 'message.html' %}
+  <h1 class="title">CATEGORIES</h1>
+  <!-- Loop for displaying all categories -->
+  {% for category in categories %}
+  <!-- Container for each category -->
+    <div class="category-container">
+      <!-- Link to display items in category -->
+      <a class="category-link" href="{{url_for('items', category_id=category.id)}}">
+        <!-- Category name -->
+        <h2 class="category-title">
+          {{category.name}}
+        </h2>
+      </a>
+    </div>
+  {% endfor %}
+{% endblock %}
