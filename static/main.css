@@ -1,0 +1,163 @@
+
+
+body {
+	background-color: #293241;
+	background: linear-gradient(to bottom, rgba(41, 50, 65,0.80) 0%,rgba(0,0,0,0) 150%);
+}
+
+.btn {
+	background-color: #293241;
+	color: #FFFFFF;
+}
+.btn-group-justified {
+	display: inline;
+}
+.category-container {
+	width: 80%;
+	border: 1px solid #2f3a1f;
+	display: block;
+	border-radius: 20px;
+	padding: 20px;
+	text-align: center;
+	margin: 35px auto 50px auto;
+	background: #293241;
+	box-shadow: outset 0 7px 5px 0px rgba(0,0,0,0.8);
+}
+
+.category-link {
+	color: #293241;
+	font-family: 'Carrois Gothic SC', sans-serif;
+}
+
+.category-link:hover {
+	color: #98C1D9;
+	text-decoration: none;
+}
+
+.category-title {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	font-size: 3em;
+	margin: 0 0 20px 0;
+	padding: 20px 0;
+	border: 1px solid black;
+	border-radius: 15px;
+	background-color: #FFFFFF;
+}
+
+.content {
+	background-color: #d9d9d9;
+	padding: 20px;
+}
+
+.form-control {
+	padding: 40px;
+	font-size: 5em;
+	margin: 0;
+}
+
+.form-group {
+	text-align: center;
+	font-size: 3em;
+}
+
+.header-title {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	font-size: 8em;
+	color: #ff3300;
+	text-shadow: 5px 0px 8px #293241;
+	outline: 3px solid #293241;
+	background-color: rgba(255, 255, 255, 0.60);
+	margin: 40px 0;
+}
+
+.hz-rule {
+	height: 5px;
+	background: #000;
+	margin: 20px 0;
+}
+
+
+
+.input-group {
+	margin: 30px 0;
+
+}
+.input-group-addon {
+	font-size: 3em;
+}
+.items {
+	background-color: #FFFFFF;
+}
+.item-name {
+	font-family: 'Carrois Gothic SC', sans-serif;
+	font-size: 5em;
+	color: #293241;
+}
+.item-price {
+	color: #FF3300;
+}
+
+.jumbotron {
+	height: 35vw;
+	background-image: url('/static/img/book.jpg');
+	background-size: cover;
+	margin: 0;
+	text-align: center;
+	border-radius: 0;
+}
+
+.login {
+	text-align: center;
+	padding: 40px 0;
+	background-color: #FFF;
+	height:100%;
+}
+
+.login h1 {
+	border: 3px solid #FF3300;
+}
+
+.nav a {
+	color: #FFF;
+}
+
+.nav li {
+	display: inline-block;
+	padding: 20px;
+	margin: 0 20px;
+}
+
+.nav ul {
+	text-align: center;
+}
+
+.nav-link {
+	font-size: 2em;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	text-decoration: none;
+	color: #FF3300;
+}	
+
+.title {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-size: 3em;
+	color: #FF3300;
+    text-shadow: 5px 0px 8px #000000;
+}
+.editform {
+	text-align: center;
+}
+
+@media (max-width: 400px) {
+	.header-title {
+		font-size: 3em;
+	}
+	.navbar {
+		display: none;
+	}
+} 
